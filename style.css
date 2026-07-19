@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 * { 
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
-  font-family: 'Orbitron', 'Segoe UI', sans-serif; 
+  font-family: 'Orbitron', sans-serif; 
 } 
 
 body { 
@@ -14,19 +14,19 @@ body {
   min-height: 100vh; 
 } 
 
-/* SIDEBAR */
+/* SIDEBAR CHOTA */
 .sidebar { 
-  width: 260px; 
+  width: 240px; /* 260 se 240 */
   background: #050505; 
   border-right: 2px solid #00aaff; 
-  padding: 20px 10px; 
+  padding: 15px 8px; 
   position: fixed; 
   height: 100%; 
 } 
 
 .logo-circle { 
-  width: 70px; 
-  height: 70px; 
+  width: 60px; /* 70 se 60 */
+  height: 60px; 
   border: 2px solid #00aaff; 
   border-radius: 50%; 
   display: flex; 
@@ -34,42 +34,38 @@ body {
   justify-content: center; 
   flex-direction: column; 
   margin: 0 auto; 
-  font-size: 22px; 
+  font-size: 18px; /* 22 se 18 */
   color: #00aaff; 
-  box-shadow: 0 0 15px #00aaff50;
+  box-shadow: 0 0 10px #00aaff50;
 } 
 
 .logo span { 
   display: block; 
   text-align: center; 
-  margin-top: 10px; 
+  margin-top: 8px; 
   color: #ccc; 
-  font-size: 14px;
+  font-size: 12px; /* chota */
   letter-spacing: 1px;
-} 
-
-.logo b { 
-  color: #00aaff; 
 } 
 
 .sidebar ul { 
   list-style: none; 
-  margin-top: 20px; 
+  margin-top: 15px; 
 } 
 
 .sidebar li { 
-  padding: 12px 15px; 
-  margin: 5px 0; 
-  border-radius: 8px; 
+  padding: 10px 12px; /* 12 se 10 */
+  margin: 3px 0; 
+  border-radius: 6px; 
   cursor: pointer; 
   color: #aaa; 
   transition: 0.3s; 
-  font-size: 13px;
+  font-size: 12px; /* 13 se 12 */
 } 
 
 .sidebar li i { 
-  margin-right: 10px; 
-  width: 20px; 
+  margin-right: 8px; 
+  width: 18px; 
 } 
 
 .sidebar li.active, .sidebar li:hover { 
@@ -80,7 +76,7 @@ body {
 
 .footer { 
   text-align: center; 
-  font-size: 10px; 
+  font-size: 9px; /* 10 se 9 */
   color: #555; 
   position: absolute; 
   bottom: 10px; 
@@ -89,24 +85,24 @@ body {
 
 /* MAIN */
 .main { 
-  margin-left: 260px; 
-  padding: 20px; 
+  margin-left: 240px; /* sidebar ke hisab se */
+  padding: 15px; 
   width: 100%; 
 } 
 
 .header { 
   text-align: center; 
-  margin-bottom: 20px; 
+  margin-bottom: 15px; 
   background: linear-gradient(180deg, #001a33 0%, #000 100%);
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #00aaff50;
-  border-radius: 12px;
+  border-radius: 10px;
 } 
 
 .header h1 { 
-  font-size: 45px; 
+  font-size: 35px; /* 45 se 35 */
   font-weight: 900; 
-  text-shadow: 0 0 10px #00aaff80;
+  text-shadow: 0 0 8px #00aaff80;
 } 
 
 .header h1 span { 
@@ -114,70 +110,76 @@ body {
 } 
 
 .header p { 
-  letter-spacing: 5px; 
+  letter-spacing: 4px; 
   color: #aaa; 
-  font-size: 12px;
+  font-size: 10px;
 } 
 
 .tag { 
   border: 1px solid #00aaff; 
   display: inline-block; 
-  padding: 5px 15px; 
-  border-radius: 20px; 
-  margin-top: 10px; 
+  padding: 4px 12px; 
+  border-radius: 15px; 
+  margin-top: 8px; 
   color: #00aaff; 
-  font-size: 11px;
+  font-size: 10px;
 } 
 
 .tool-title { 
   color: #00aaff; 
-  margin: 20px 0 10px; 
-  font-size: 16px;
+  margin: 15px 0 8px; 
+  font-size: 14px;
 }
 
-/* TOOLKIT - CHOTE CARDS */
+/* TOOLKIT - BOHOT CHOTE CARDS */
 .toolkit { 
   display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /* CHOTA KIYA */
-  gap: 12px; /* CHOTA KIYA */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* 170 se 130 */
+  gap: 10px; /* 12 se 10 */
 } 
 
 .card { 
   background: #0d0d0d; 
   border: 1px solid #00aaff30; 
-  padding: 14px; /* CHOTA KIYA */
-  border-radius: 10px; 
+  padding: 12px 8px; /* 14 se 12 */
+  border-radius: 8px; /* 10 se 8 */
   text-align: center; 
   cursor: pointer; 
   transition: 0.3s; 
+  height: 95px; /* fix height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 } 
 
 .card:hover { 
   border-color: #00aaff; 
-  transform: translateY(-5px); 
-  box-shadow: 0 0 15px #00aaff40; 
+  transform: translateY(-3px); 
+  box-shadow: 0 0 12px #00aaff40; 
   background: #001a33;
 } 
 
 .card i { 
-  font-size: 22px; /* CHOTA KIYA */
+  font-size: 20px; /* 22 se 20 */
   color: #00aaff; 
-  margin-bottom: 8px; /* CHOTA KIYA */
+  margin-bottom: 6px; 
 } 
 
 .card p {
-  font-size: 11px; /* CHOTA KIYA */
-  line-height: 1.4;
-  font-weight: 600;
+  font-size: 10px; /* 11 se 10 */
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .bottom { 
   text-align: center; 
-  margin-top: 30px; 
+  margin-top: 20px; 
   color: #aaa; 
   border: 1px solid #00aaff50;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 11px;
 } 
 
 .bottom span { 
@@ -185,10 +187,11 @@ body {
   font-weight: bold; 
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
-  .sidebar{ width:200px; }
-  .main{ margin-left:200px; }
-  .header h1{ font-size:28px; }
-  .toolkit{ grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .sidebar{ width:180px; }
+  .main{ margin-left:180px; padding:10px; }
+  .header h1{ font-size:24px; }
+  .toolkit{ grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+  .card{ height:85px; }
 }
