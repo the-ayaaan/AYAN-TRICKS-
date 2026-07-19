@@ -41,4 +41,154 @@ body {
 
 .logo span { 
   display: block; 
-  text-align:
+  text-align: center; 
+  margin-top: 10px; 
+  color: #ccc; 
+  font-size: 14px;
+  letter-spacing: 1px;
+} 
+
+.logo b { 
+  color: #00aaff; 
+} 
+
+.sidebar ul { 
+  list-style: none; 
+  margin-top: 20px; 
+} 
+
+.sidebar li { 
+  padding: 12px 15px; 
+  margin: 5px 0; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  color: #aaa; 
+  transition: 0.3s; 
+  font-size: 13px;
+} 
+
+.sidebar li i { 
+  margin-right: 10px; 
+  width: 20px; 
+} 
+
+.sidebar li.active, .sidebar li:hover { 
+  background: #00aaff1a; 
+  color: #00aaff; 
+  border-left: 3px solid #00aaff;
+} 
+
+.footer { 
+  text-align: center; 
+  font-size: 10px; 
+  color: #555; 
+  position: absolute; 
+  bottom: 10px; 
+  width: 100%; 
+}
+
+/* MAIN */
+.main { 
+  margin-left: 260px; 
+  padding: 20px; 
+  width: 100%; 
+} 
+
+.header { 
+  text-align: center; 
+  margin-bottom: 20px; 
+  background: linear-gradient(180deg, #001a33 0%, #000 100%);
+  padding: 20px;
+  border: 1px solid #00aaff50;
+  border-radius: 12px;
+} 
+
+.header h1 { 
+  font-size: 45px; 
+  font-weight: 900; 
+  text-shadow: 0 0 10px #00aaff80;
+} 
+
+.header h1 span { 
+  color: #00aaff; 
+} 
+
+.header p { 
+  letter-spacing: 5px; 
+  color: #aaa; 
+  font-size: 12px;
+} 
+
+.tag { 
+  border: 1px solid #00aaff; 
+  display: inline-block; 
+  padding: 5px 15px; 
+  border-radius: 20px; 
+  margin-top: 10px; 
+  color: #00aaff; 
+  font-size: 11px;
+} 
+
+.tool-title { 
+  color: #00aaff; 
+  margin: 20px 0 10px; 
+  font-size: 16px;
+}
+
+/* TOOLKIT - CHOTE CARDS */
+.toolkit { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /* CHOTA KIYA */
+  gap: 12px; /* CHOTA KIYA */
+} 
+
+.card { 
+  background: #0d0d0d; 
+  border: 1px solid #00aaff30; 
+  padding: 14px; /* CHOTA KIYA */
+  border-radius: 10px; 
+  text-align: center; 
+  cursor: pointer; 
+  transition: 0.3s; 
+} 
+
+.card:hover { 
+  border-color: #00aaff; 
+  transform: translateY(-5px); 
+  box-shadow: 0 0 15px #00aaff40; 
+  background: #001a33;
+} 
+
+.card i { 
+  font-size: 22px; /* CHOTA KIYA */
+  color: #00aaff; 
+  margin-bottom: 8px; /* CHOTA KIYA */
+} 
+
+.card p {
+  font-size: 11px; /* CHOTA KIYA */
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.bottom { 
+  text-align: center; 
+  margin-top: 30px; 
+  color: #aaa; 
+  border: 1px solid #00aaff50;
+  padding: 10px;
+  border-radius: 8px;
+} 
+
+.bottom span { 
+  color: #00aaff; 
+  font-weight: bold; 
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+  .sidebar{ width:200px; }
+  .main{ margin-left:200px; }
+  .header h1{ font-size:28px; }
+  .toolkit{ grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
