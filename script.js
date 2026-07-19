@@ -1,15 +1,29 @@
-// Abhi ye sirf alert dega. Baad me har tool ka function add karenge
-document.querySelectorAll('.card').forEach((card, index) => {
-  card.addEventListener('click', () => {
-    const toolName = card.querySelector('p').innerText;
-    alert(toolName + " - Tool jald hi add hoga 😎");
-  });
-});
+// Tool open karne ka function
+function openTool(page){
+  window.location.href = page;
+}
 
-// Sidebar active
-document.querySelectorAll('.sidebar li').forEach(li => {
-  li.addEventListener('click', () => {
-    document.querySelector('.sidebar li.active').classList.remove('active');
-    li.classList.add('active');
-  });
-});
+// Sidebar me active class change karna
+document.querySelectorAll('.sidebar li').forEach(item=>{
+  item.addEventListener('click',()=>{
+    // purane active ko hatao
+    let active = document.querySelector('.sidebar li.active');
+    if(active) active.classList.remove('active');
+    
+    // naye pe active lagao
+    item.classList.add('active');
+  })
+})
+
+// Page load hone pe choti animation
+window.addEventListener('load', () => {
+  document.querySelectorAll('.card').forEach((card, i) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(20px)";
+    setTimeout(() => {
+      card.style.transition = "0.4s";
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }, i * 80)
+  })
+})
