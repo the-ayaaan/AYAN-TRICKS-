@@ -1,29 +1,15 @@
-// Tool open karne ka function
-function openTool(page){
-  window.location.href = page;
-}
+console.log("AYAN TRICKS Loaded ✅")
 
-// Sidebar me active class change karna
-document.querySelectorAll('.sidebar li').forEach(item=>{
-  item.addEventListener('click',()=>{
-    // purane active ko hatao
-    let active = document.querySelector('.sidebar li.active');
-    if(active) active.classList.remove('active');
-    
-    // naye pe active lagao
-    item.classList.add('active');
-  })
+// Cards pe click ka effect
+document.querySelectorAll('.card').forEach(card => {
+card.addEventListener('click', () => {
+    let toolName = card.querySelector('p').innerText;
+    document.body.innerHTML = `
+    <div style="background:#000;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;">
+        <img src="coming-soon.jpg" style="max-width:90%;border-radius:15px;">
+        <h2 style="color:#ff4500;margin-top:20px;">${toolName}</h2>
+        <button onclick="window.location.href='index.html'" style="background:#ff4500;color:#fff;border:none;padding:10px 20px;border-radius:8px;margin-top:15px;cursor:pointer;">Back to Home</button>
+    </div>
+    `;
 })
-
-// Page load hone pe choti animation
-window.addEventListener('load', () => {
-  document.querySelectorAll('.card').forEach((card, i) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(20px)";
-    setTimeout(() => {
-      card.style.transition = "0.4s";
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
-    }, i * 80)
-  })
 })
