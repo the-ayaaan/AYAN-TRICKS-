@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IP Information - AYAN TRICKS</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .ip-box{background:#1a1a1a;padding:20px;border-radius:10px;border:1px solid #ff550050;margin-top:15px}
+    .ip-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #222;font-size:12px}
+    .ip-row:last-child{border:none}
+    .ip-label{color:#aaa}
+    .ip-value{color:#ff5500;font-weight:600}
+    .loader{color:#ff5500;text-align:center;padding:30px}
+  </style>
 </head>
 <body>
   <div class="sidebar">
@@ -19,24 +27,15 @@
   <div class="main">
     <div class="header">
       <h1><span class="orange">IP</span> INFORMATION</h1>
-      <p>CHECK YOUR IP DETAILS</p>
+      <p>YOUR REAL IP DETAILS</p>
     </div>
     
-    <div style="background:#1a1a1a;padding:20px;border-radius:10px;text-align:center">
-      <h3>Your IP: <span id="ip">Loading...</span></h3>
-      <p>Country: <span id="country">Loading...</span></p>
-      <p>City: <span id="city">Loading...</span></p>
-    </div>
-  </div>
-
-<script>
-fetch('https://ipapi.co/json/')
-.then(res=>res.json())
-.then(data=>{
-  document.getElementById('ip').innerText = data.ip;
-  document.getElementById('country').innerText = data.country_name;
-  document.getElementById('city').innerText = data.city;
-})
-</script>
-</body>
-</html>
+    <div class="ip-box">
+      <div id="loader" class="loader"><i class="fa fa-spinner fa-spin"></i> Fetching IP...</div>
+      
+      <div id="ip-data" style="display:none">
+        <div class="ip-row"><span class="ip-label">Your IP:</span> <span class="ip-value" id="ip"></span></div>
+        <div class="ip-row"><span class="ip-label">Country:</span> <span class="ip-value" id="country"></span></div>
+        <div class="ip-row"><span class="ip-label">City:</span> <span class="ip-value" id="city"></span></div>
+        <div class="ip-row"><span class="ip-label">Region:</span> <span class="ip-value" id="region"></span></div>
+        <div class="ip-row"><span class="ip-label
