@@ -1,47 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
 
-body {
-  background: #000 !important;
-  font-family: 'Orbitron', sans-serif !important;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Orbitron',sans-serif
+}
+
+body{
+  background:#000;
+  color:#fff;
+  display:flex;
+  min-height:100vh;
+  background-image: 
+    linear-gradient(rgba(0,170,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,170,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 /* SIDEBAR */
-.sidebar, [class*="sidebar"] {
-  background: #050505 !important;
-  border-right: 2px solid #00aaff !important;
-}
-.logo-circle, .logo {
-  border: 3px solid #00aaff !important;
-  box-shadow: 0 0 20px #00aaff80 !important;
-}
-.logo span, .logo-text { color: #00aaff !important; }
-.sidebar li.active, .sidebar li:hover {
-  background: #00aaff1a !important;
-  color: #00aaff !important;
-  border-left: 3px solid #00aaff !important;
+.sidebar{
+  width:240px;
+  background:#050505;
+  border-right:2px solid #00aaff;
+  padding:15px 8px;
+  position:fixed;
+  height:100%;
+  box-shadow: 0 0 20px #00aaff20;
 }
 
-/* HEADER */
-.header, main h1 {
-  background: linear-gradient(180deg, #001a33 0%, #000 100%) !important;
-  border: 2px solid #00aaff50 !important;
-  border-radius: 12px !important;
-}
-h1, .header h1 { 
-  color: #fff !important; 
-  text-shadow: 0 0 15px #00aaff80 !important;
-}
-h1 span, .header h1 span { color: #00aaff !important; }
-
-/* CARDS */
-.card, .tool {
-  background: #0a0a0a !important;
-  border: 1px solid #00aaff40 !important;
-  border-radius: 10px !important;
-}
-.card:hover, .tool:hover {
-  border-color: #00aaff !important;
-  box-shadow: 0 0 20px #00aaff50 !important;
-  background: #001a33 !important;
-}
-.card i, .tool i { color: #00aaff !important; }
+.logo-circle{
+  width:70px;
+  height:70px;
+  border:3px solid #00aaff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto;
+  font-size:28px;
+  font-weight:900;
+  background:linear-gradient(135deg,#001a33,#000);
+  box-shadow:0 
