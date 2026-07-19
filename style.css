@@ -1,61 +1,56 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body {
-  background: #000;
-  color: #fff;
-  display: flex;
-  min-height: 100vh;
-}
-.sidebar {
-  width: 260px;
-  background: #050505;
-  border-right: 2px solid #00aaff;
-  padding: 20px 10px;
-  position: fixed;
-  height: 100%;
-}
-.logo-circle {
-  width: 70px; height: 70px; border: 2px solid #00aaff; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; flex-direction: column;
-  margin: 0 auto; font-size: 22px; color: #00aaff;
-}
-.logo span { display: block; text-align: center; margin-top: 10px; color: #ccc; }
-.logo b { color: #00aaff; }
-.sidebar ul { list-style: none; margin-top: 20px; }
-.sidebar li {
-  padding: 12px 15px; margin: 5px 0; border-radius: 8px; cursor: pointer;
-  color: #aaa; transition: 0.3s;
-}
-.sidebar li i { margin-right: 10px; width: 20px; }
-.sidebar li.active, .sidebar li:hover {
-  background: #00aaff1a; color: #00aaff;
-}
-.footer { text-align: center; font-size: 12px; color: #555; position: absolute; bottom: 10px; width: 100%; }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
-.main { margin-left: 260px; padding: 20px; width: 100%; }
-.header { text-align: center; margin-bottom: 20px; }
-.header h1 { font-size: 45px; font-weight: 900; }
-.header h1 span { color: #00aaff; }
-.header p { letter-spacing: 5px; color: #aaa; }
-.tag {
-  border: 1px solid #00aaff; display: inline-block; padding: 5px 15px;
-  border-radius: 20px; margin-top: 10px; color: #00aaff;
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron', sans-serif; }
+body { background:#000; color:#fff; display:flex; }
+
+.sidebar {
+  width:250px; background:#030303; border-right:2px solid #00aaff;
+  padding:20px 0; height:100vh; position:fixed;
 }
-.tool-title { color: #00aaff; margin: 20px 0 10px; }
-.toolkit {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+.logo { text-align:center; margin-bottom:20px; }
+.logo-circle { 
+  width:80px; height:80px; border:3px solid #00aaff; border-radius:50%;
+  margin:0 auto; color:#00aaff; font-size:22px; padding-top:10px;
 }
+.logo h2 { font-size:16px; margin-top:8px; }
+.logo span { color:#00aaff; }
+.menu { list-style:none; }
+.menu li { 
+  padding:12px 20px; color:#aaa; cursor:pointer; 
+  border-left:3px solid transparent;
+}
+.menu li.active, .menu li:hover { 
+  background:#001a33; color:#00aaff; border-left:3px solid #00aaff;
+}
+.menu i { margin-right:10px; width:20px; }
+.footer { text-align:center; font-size:10px; color:#555; position:absolute; bottom:10px; width:100%; }
+
+.main { margin-left:250px; padding:20px; width:100%; }
+.banner { 
+  background:linear-gradient(90deg,#000 0%, #001a33 100%);
+  border:2px solid #00aaff; border-radius:12px; padding:20px;
+  position:relative; overflow:hidden;
+}
+.banner h1 { font-size:40px; }
+.banner h1 span { color:#00aaff; }
+.banner p { letter-spacing:4px; color:#aaa; }
+.tag { border:1px solid #00aaff; display:inline-block; padding:5px 15px; margin-top:10px; color:#00aaff; border-radius:6px; }
+.hoodie { position:absolute; right:0; top:0; height:150px; opacity:0.3; }
+
+.toolkit-title { color:#00aaff; margin:20px 0 10px; }
+.toolkit { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
 .card {
-  background: #0d0d0d;
-  border: 1px solid #00aaff30;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
+  background:#0a0a0a; border:1px solid #111; border-radius:10px;
+  padding:20px; text-align:left; cursor:pointer; transition:0.3s;
+  border-bottom:3px solid #00aaff;
 }
-.card:hover { border-color: #00aaff; transform: translateY(-5px); box-shadow: 0 0 15px #00aaff40; }
-.card i { font-size: 28px; color: #00aaff; margin-bottom: 10px; }
-.bottom { text-align: center; margin-top: 30px; color: #aaa; }
-.bottom span { color: #00aaff; font-weight: bold; }
+.card:hover { background:#001a33; transform:translateY(-3px); }
+.card i { font-size:28px; margin-bottom:10px; }
+.card p { font-size:12px; line-height:1.4; }
+
+.footer-bar { 
+  border:1px solid #00aaff; text-align:center; padding:10px; 
+  margin-top:20px; border-radius:8px; color:#aaa;
+}
+.footer-bar span { color:#00aaff; }
+.footer-bar i { color:red; }
